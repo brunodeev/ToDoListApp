@@ -11,51 +11,52 @@ struct LoginView: View {
                         
     @State var email = ""
     @State var password = ""
+    @State var value: Bool = false
     
     var body: some View {
         NavigationView {
-            VStack{
+            VStack {
                 // Header
                 HeaderView()
                 
                 // Form
-                Form{
+                VStack {
                     TextField("Email", text: $email)
+                        .textFieldStyle(DefaultTextFieldStyle())
                         .padding()
                         .background(.gray.opacity(0.15))
                         .clipShape(.rect(cornerRadius: 8))
-                        .listRowSeparator(.hidden)
-                        
+                
                     SecureField("Senha", text: $password)
+                        .textFieldStyle(DefaultTextFieldStyle())
                         .padding()
                         .background(.gray.opacity(0.15))
                         .clipShape(.rect(cornerRadius: 8))
-                        .listRowSeparator(.hidden)
-                    Button{
+                                                
+                    Button {
                         
                     } label: {
                         ZStack {
-                            RoundedRectangle(cornerRadius: 10)
-                                .foregroundStyle(.indigo)
+                            RoundedRectangle(cornerRadius: 8)
+                                .fill(.indigo)
+                                .frame(height: 50)
                             Text("Login")
                                 .foregroundStyle(.white)
-                                .padding(.vertical, 8)
                                 .bold()
                         }
                     }
-                    .padding(.top, 20)
+                    .padding(.top, 15)
                 }
-                .listRowSpacing(-10)
-                .padding(.top, -40)
-                .background(Color.clear).scrollContentBackground(.hidden)
-                
-                Spacer()
+                .padding(.horizontal)
                 
                 // Create account
                 VStack{
                     Text("Novo por aqui?")
                     NavigationLink("Crie uma conta", destination: RegisterView())
+                        .foregroundStyle(.indigo)
                 }
+                .padding(.top, 200)
+                
             }
         }
     }

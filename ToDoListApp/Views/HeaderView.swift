@@ -19,14 +19,14 @@ struct HeaderView: View {
                     .font(.system(size: 45))
                     .foregroundStyle(.white)
                     .bold()
-                Text("Obtenha o controle")
+                Text("Controle tudo")
                     .font(.system(size: 21))
                     .foregroundStyle(.white)
                     .bold()
             }
             .padding(.top, 40)
         }
-        .offset(y: -100)
+        .offset(y: -120)
     }
 }
 
