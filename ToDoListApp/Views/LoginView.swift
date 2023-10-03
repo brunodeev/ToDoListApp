@@ -17,7 +17,7 @@ struct LoginView: View {
         NavigationView {
             VStack {
                 // Header
-                HeaderView()
+                HeaderView(title: "To Do List", subtitle: "Controle tudo", color: .indigo)
                 
                 // Form
                 VStack {
