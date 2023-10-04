@@ -1,9 +1,3 @@
-//
-//  RegisterView.swift
-//  ToDoListApp
-//
-//  Created by Bruno César on 02/10/23.
-//
 
 import SwiftUI
 
@@ -17,7 +11,7 @@ struct RegisterView: View {
     var body: some View {
         VStack {
             // Header
-            HeaderView(title: "Registrar", subtitle: "Criar nova conta", color: .teal)
+            HeaderView(title: "Registrar", subtitle: "Criar nova conta", color: .teal, angle: -120)
             
             // Form
             VStack {

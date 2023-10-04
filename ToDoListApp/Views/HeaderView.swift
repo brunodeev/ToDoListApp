@@ -12,6 +12,7 @@ struct HeaderView: View {
     let title: String
     let subtitle: String
     let color: Color
+    let angle: CGFloat
     
     var body: some View {
         ZStack{
@@ -31,10 +32,10 @@ struct HeaderView: View {
             }
             .padding(.top, 65)
         }
-        .offset(y: -120)
+        .offset(y: angle)
     }
 }
 
 #Preview {
-    HeaderView(title: "Test", subtitle: "Test", color: .indigo)
+    HeaderView(title: "Test", subtitle: "Test", color: .indigo, angle: -120)
 }
