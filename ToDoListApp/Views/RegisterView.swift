@@ -61,10 +61,12 @@ struct RegisterView: View {
             }
             .offset(y: -40)
             .padding(.horizontal)
+            .toolbar(.hidden, for: .navigationBar)
             
             Spacer()
         }
     }
+    
 }
 
 #Preview {
