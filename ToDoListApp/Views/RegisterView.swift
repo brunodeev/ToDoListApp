@@ -3,10 +3,7 @@ import SwiftUI
 
 struct RegisterView: View {
     
-    @State var name = ""
-    @State var email = ""
-    @State var password = ""
-    @State var confirmPassword = ""
+    @StateObject var viewModel = RegisterViewModel()
     
     var body: some View {
         VStack {
@@ -15,25 +12,25 @@ struct RegisterView: View {
             
             // Form
             VStack {
-                TextField("Nome", text: $name)
+                TextField("Nome", text: $viewModel.name)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .padding()
                     .background(.gray.opacity(0.15))
                     .clipShape(.rect(cornerRadius: 8))
                 
-                TextField("Email", text: $email)
+                TextField("Email", text: $viewModel.email)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .padding()
                     .background(.gray.opacity(0.15))
                     .clipShape(.rect(cornerRadius: 8))
                 
-                SecureField("Senha", text: $password)
+                SecureField("Senha", text: $viewModel.password)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .padding()
                     .background(.gray.opacity(0.15))
                     .clipShape(.rect(cornerRadius: 8))
             
-                SecureField("Confirmar senha", text: $confirmPassword)
+                SecureField("Confirmar senha", text: $viewModel.confirmPassword)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .padding()
                     .background(.gray.opacity(0.15))

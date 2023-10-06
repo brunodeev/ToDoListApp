@@ -55,6 +55,7 @@
 		15CEBAD12ACCE5A1007FACC7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEBAD02ACCE5A1007FACC7 /* LoginViewModel.swift */; };
 		15CEBAD32ACCE5AB007FACC7 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEBAD22ACCE5AB007FACC7 /* RegisterViewModel.swift */; };
 		15CEBAD52ACCE5BB007FACC7 /* ToDoListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEBAD42ACCE5BB007FACC7 /* ToDoListItemViewModel.swift */; };
+		15FD35B82ACFA71A00409614 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FD35B72ACFA71A00409614 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		15CEBAD02ACCE5A1007FACC7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		15CEBAD22ACCE5AB007FACC7 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		15CEBAD42ACCE5BB007FACC7 /* ToDoListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemViewModel.swift; sourceTree = "<group>"; };
+		15FD35B72ACFA71A00409614 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 				153BB9B02ACDE3DD005513F2 /* GoogleService-Info.plist */,
 				159144CD2ACADE2200CD7800 /* Assets.xcassets */,
 				159144C92ACADE2000CD7800 /* ToDoListAppApp.swift */,
+				15FD35B72ACFA71A00409614 /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				15CEBAD12ACCE5A1007FACC7 /* LoginViewModel.swift in Sources */,
 				15CEBAC92ACCE54F007FACC7 /* MainViewModel.swift in Sources */,
 				15C105592ACB493A00BF5772 /* User.swift in Sources */,
+				15FD35B82ACFA71A00409614 /* Extensions.swift in Sources */,
 				15C105572ACB469C00BF5772 /* LoginView.swift in Sources */,
 				159144CC2ACADE2000CD7800 /* MainView.swift in Sources */,
 				15CEBAD32ACCE5AB007FACC7 /* RegisterViewModel.swift in Sources */,
