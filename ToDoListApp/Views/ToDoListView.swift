@@ -1,15 +1,16 @@
-//
-//  ToDoListView.swift
-//  ToDoListApp
-//
-//  Created by Bruno César on 02/10/23.
-//
 
+import FirebaseAuth
 import SwiftUI
 
 struct ToDoListView: View {
+    
+    let currentUser = Auth.auth().currentUser?.email
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Bem vindo a sua conta")
+            Text(currentUser!)
+        }
     }
 }
 

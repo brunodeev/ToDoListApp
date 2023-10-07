@@ -1,15 +1,24 @@
-//
-//  ContentView.swift
-//  ToDoListApp
-//
-//  Created by Bruno César on 02/10/23.
-//
 
 import SwiftUI
 
 struct MainView: View {
+    @StateObject var viewModel = MainViewModel()
+    
     var body: some View {
-        LoginView()
+        if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
+            TabView {
+                ToDoListView()
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                ProfileView()
+                    .tabItem {
+                        Label("Perfil", systemImage: "person.circle")
+                    }
+            }
+        } else {
+            LoginView()
+        }
     }
 }
 

@@ -37,13 +37,13 @@ struct RegisterView: View {
                     .clipShape(.rect(cornerRadius: 8))
                                             
                 Button {
-                    
+                    viewModel.register()
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 8)
                             .fill(.teal)
                             .frame(height: 50)
-                        Text("Login")
+                        Text("Registrar")
                             .foregroundStyle(.white)
                             .bold()
                     }

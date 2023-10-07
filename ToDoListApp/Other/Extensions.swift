@@ -2,7 +2,7 @@
 import Foundation
 
 extension Encodable {
-    func asDictionary() -> [String: Any] {
+    func asDictionary() -> [String: Any] {                              // Funcao que transforma um dicionario em JSON
         guard let data = try? JSONEncoder().encode(self) else {
             return [:]
         }
