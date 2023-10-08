@@ -1,17 +1,21 @@
 
-import FirebaseAuth
 import SwiftUI
 
 struct ToDoListView: View {
+    @State var viewModel = ToDoListViewModel()
     
-    let currentUser = Auth.auth().currentUser?.email
+    private let userId: String
+    
+    init(userId: String) {
+        self.userId = userId
+    }
     
     var body: some View {
         NavigationView {
             VStack {
                 
             }
-            .navigationTitle("ToDo's")
+            .navigationTitle("Tarefas")
             .toolbar {
                 Button {
                     
@@ -24,5 +28,5 @@ struct ToDoListView: View {
 }
 
 #Preview {
-    ToDoListView()
+    ToDoListView(userId: "")
 }
