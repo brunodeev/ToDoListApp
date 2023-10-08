@@ -1,4 +1,6 @@
 
+import FirebaseAuth
+import FirebaseFirestore
 import Foundation
 
 class NewItemViewModel: ObservableObject {
@@ -11,7 +13,24 @@ class NewItemViewModel: ObservableObject {
     }
     
     func save() {
+        guard canSave else {
+            return
+        }
         
+        // Obtendo o usuario atual
+        guard let uId = Auth.auth().currentUser?.uid else {
+            return
+        }
+        
+        
+        // Salvando no banco de dados do Firebase
+        let db = Firestore.firestore()
+        
+        db.collection("users")
+            .document(uId)
+            .collection("todos")
+            .document("123")
+            .setData([:])
     }
     
     var canSave: Bool {
