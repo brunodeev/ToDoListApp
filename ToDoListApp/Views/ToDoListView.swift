@@ -7,9 +7,18 @@ struct ToDoListView: View {
     let currentUser = Auth.auth().currentUser?.email
     
     var body: some View {
-        VStack {
-            Text("Bem vindo a sua conta")
-            Text(currentUser!)
+        NavigationView {
+            VStack {
+                
+            }
+            .navigationTitle("ToDo's")
+            .toolbar {
+                Button {
+                    
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
         }
     }
 }
