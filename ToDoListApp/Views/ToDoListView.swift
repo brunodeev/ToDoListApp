@@ -23,6 +23,9 @@ struct ToDoListView: View {
                     Image(systemName: "plus")
                 }
             }
+            .sheet(isPresented: $viewModel.showingNewItemView) {
+                NewItemView(newItemPresented: $viewModel.showingNewItemView)
+                }
         }
     }
 }
