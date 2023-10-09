@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct ToDoListView: View {
-    @State var viewModel = ToDoListViewModel()
+    @StateObject var viewModel = ToDoListViewModel()
     
     private let userId: String
     
@@ -18,14 +18,14 @@ struct ToDoListView: View {
             .navigationTitle("Tarefas")
             .toolbar {
                 Button {
-                    
+                    viewModel.showingNewItemView = true
                 } label: {
                     Image(systemName: "plus")
                 }
             }
-            .sheet(isPresented: $viewModel.showingNewItemView) {
+            .sheet(isPresented: $viewModel.showingNewItemView, content: {
                 NewItemView(newItemPresented: $viewModel.showingNewItemView)
-                }
+            })
         }
     }
 }
