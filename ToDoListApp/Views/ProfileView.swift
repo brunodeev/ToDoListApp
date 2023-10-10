@@ -47,7 +47,7 @@ struct ProfileView: View {
                                 .bold()
                         }
                     }
-                    .padding(.horizontal)
+                    .padding(.horizontal, 50)
                 } else {
                     Text("Carregando Perfil...")
                 }
