@@ -22,6 +22,14 @@ class NewItemViewModel: ObservableObject {
             return
         }
         
+        // Criando o modelo
+        let newId = UUID().uuidString
+        let newItem = ToDoListItem(id: newId,
+                                   title: title,
+                                   dueDate: dueDate.timeIntervalSince1970,
+                                   createdDate: Date().timeIntervalSince1970,
+                                   isDone: false)
+        
         
         // Salvando no banco de dados do Firebase
         let db = Firestore.firestore()
@@ -29,8 +37,8 @@ class NewItemViewModel: ObservableObject {
         db.collection("users")
             .document(uId)
             .collection("todos")
-            .document("123")
-            .setData([:])
+            .document(newId)
+            .setData(newItem.asDictionary())
     }
     
     var canSave: Bool {
