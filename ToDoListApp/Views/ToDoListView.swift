@@ -14,8 +14,13 @@ struct ToDoListView: View {
         NavigationView {
             VStack {
                 List(items) { item in
-                    Text(item.title)
-                    
+                    ToDoListItemView(item: item)
+                        .swipeActions {
+                            Button("Apagar") {
+                                viewModel.delete(id: item.id)
+                            }
+                            .background(Color.red)
+                        }
                 }
                 .listStyle(PlainListStyle())
             }
@@ -35,5 +40,5 @@ struct ToDoListView: View {
 }
 
 #Preview {
-    ToDoListView(userId: "")
+    ToDoListView(userId: "985S9jiWTxfDjKlX2GklfK02d4l1")
 }
